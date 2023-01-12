@@ -6,11 +6,10 @@ const authRoute = require("./routes/auth");
 const userRoute = require("./routes/users");
 const movieRoute = require("./routes/movies");
 const listRoute = require("./routes/lists");
-const cors = require("cors")
+const cors = require("cors");
+const serverless = require("serverless-http");
 
-app.use(cors({
-     origin: "http://localhost:3000"
-}));
+app.use(cors());
 
 dotenv.config();
 
@@ -32,7 +31,15 @@ app.use("/api/users", userRoute);
 app.use("/api/movies", movieRoute);
 app.use("/api/lists", listRoute);
 
+const PORT=8800 || process.env.PORT
 
-app.listen(8800, () => {
-  console.log("Backend server is running!");
+
+app.listen(PORT,(err)=>{
+    if(!err){
+      console.log("server is running on port "+ PORT);
+    }else{
+      console.log(err)
+    }
 });
+
+
