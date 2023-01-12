@@ -9,4 +9,4 @@ here is the api for the given app
 
 here is the client for the given app
 
-<a>https://ntflxclient-avikpl1911.vercel.app/</a>
+<a>https://ntflx-client-avikpl1911.vercel.app/</a>
