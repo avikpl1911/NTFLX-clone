@@ -22,6 +22,8 @@ function App() {
   return (
     <Router>
       <Switch>
+
+      
       <Route exact path="/login">{user ? <Redirect to ="/"/>:<Login/>}</Route>
       
       
