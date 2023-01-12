@@ -9,7 +9,7 @@ export const getLists = async (dispatch)=>{
         headers: {
           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accesstoken,
         },
-      });
+      },{timeout:1000});
       dispatch(getListsSuccess(res.data));
     } catch (err) {
       dispatch(getListsFaliure());

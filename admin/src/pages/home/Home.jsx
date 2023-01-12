@@ -35,7 +35,7 @@ export default function Home() {
             token:
             "Bearer " + JSON.parse(localStorage.getItem("user")).accesstoken,
           },
-        });
+        },{timeout:1000});
         const statsList = res.data.sort(function (a, b) {
           return a._id - b._id;
         });

@@ -7,7 +7,7 @@ export const getMovies = async (dispatch)=>{
       const res = await axios.get("https://ntflx-clone-dmat.vercel.app/api/movies", {
         headers: {
           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accesstoken,
-        },
+        }
       });
       dispatch(getMoviesSuccess(res.data));
     } catch (err) {
@@ -22,7 +22,7 @@ export const getMovies = async (dispatch)=>{
         headers: {
           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accesstoken,
         },
-      });
+      },{timeout:1000});
       dispatch(createMovieSuccess(res.data));
     } catch (err) {
       dispatch(createMovieFaliure());
