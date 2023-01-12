@@ -5,7 +5,7 @@ import { getListsFaliure, getListsSuccess,getListsStart, deleteListStart, delete
 export const getLists = async (dispatch)=>{
     dispatch(getListsStart());
     try {
-      const res = await axios.get("http://localhost:8800/api/lists", {
+      const res = await axios.get("https://ntflx-clone-dmat.vercel.app/api/lists", {
         headers: {
           token: "Bearer " + JSON.parse(localStorage.getItem("user")).accesstoken,
         },

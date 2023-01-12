@@ -30,7 +30,7 @@ export default function Home() {
   useEffect(() => {
     const getStats = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/users/stats", {
+        const res = await axios.get("https://ntflx-clone-dmat.vercel.app/api/users/stats", {
           headers: {
             token:
             "Bearer " + JSON.parse(localStorage.getItem("user")).accesstoken,
