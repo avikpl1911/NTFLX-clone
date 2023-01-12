@@ -6,3 +6,7 @@ A netflix clone using react in frontend and express for making the api admin rea
 here is the api for the given app
 
 <a>https://ntflx-clone-dmat.vercel.app/</a>
+
+here is the client for the given app
+
+<a>https://ntflxclient-avikpl1911.vercel.app/</a>
