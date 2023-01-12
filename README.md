@@ -9,4 +9,8 @@ here is the api for the given app
 
 here is the client for the given app
 
-<a>https://ntflxclient-avikpl1911.vercel.app/</a>
+<a>https://ntflx-clone-client.vercel.app/</a>
+
+here is the admin site for the app
+
+<a>https://ntflx-clone.vercel.app/</a>
