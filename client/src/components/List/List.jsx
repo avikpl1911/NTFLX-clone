@@ -31,7 +31,7 @@ function List({list}) {
             style={{display: !ismoved && "none"}} />
             <div className="container" ref={listRef}>
                 {list.content.map((item,i)=>(
-                   <Listitem index={i} item={item} />
+                   <Listitem key={i} index={i} item={item} />
                 ))}
                 
                 
