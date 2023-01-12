@@ -12,16 +12,17 @@ import { Link } from "react-router-dom";
 export default function ListItem({ index, item }) {
   const [isHovered, setIsHovered] = useState(false);
   const [movie, setMovie] = useState({});
+  
 
   useEffect(() => {
     const getMovie = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/movies/find/" + item, {
+        const res = await axios.get("https://ntflx-clone-dmat.vercel.app/api/movies/find/" + item, {
           headers: {
             token:
-            "Bearer "+JSON.parse(localStorage.getItem("user")).accessToken,
-          },
-        });
+            "Bearer "+JSON.parse(localStorage.getItem("user")).accesstoken,
+          }
+        },{timeout:1000});
         setMovie(res.data);
       } catch (err) {
         console.log(err);

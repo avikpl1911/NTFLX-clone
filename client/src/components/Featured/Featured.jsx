@@ -8,11 +8,11 @@ export default function Featured({type,setGenre}) {
    useEffect(()=>{
     const getrandomcontent = async ()=>{
       try {
-        const res = await axios.get(`http://localhost:8800/api/movies/random?type=${type}`,{
+        const res = await axios.get(`https://ntflx-clone-dmat.vercel.app/api/movies/random?type=${type}`,{
           headers: {
             token:
             "Bearer "+JSON.parse(localStorage.getItem("user")).accesstoken,
-          }});
+          }},{timeout:1000});
         setContent(res.data[0]);
       } catch (err) {
         console.log(err)

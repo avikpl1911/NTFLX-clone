@@ -13,7 +13,7 @@ const Home = ({ type }) => {
     const getRandomLists = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:8800/api/lists${type ? "?type=" + type : ""}${
+          `https://ntflx-clone-dmat.vercel.app/api/lists${type ? "?type=" + type : ""}${
             genre ? "&genre=" + genre : ""
           }`,
           {
@@ -21,8 +21,8 @@ const Home = ({ type }) => {
               token:
               "Bearer "+JSON.parse(localStorage.getItem("user")).accesstoken,
             },
-          }
-        );
+          },{timeout:3});
+        
         setLists(res.data);
       } catch (err) {
         console.log(err);
